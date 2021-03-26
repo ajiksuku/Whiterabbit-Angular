@@ -1,0 +1,30 @@
+<mat-toolbar color="primary" class="fix-nav">
+    <button type="button" mat-icon-button class="visible-md" (click)="toggleSidebar()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+
+    <div class="nav-brand">
+       <h2>File Management</h2>
+    </div>
+    <!-- <form class="hidden-sm" style="margin-left: 20px; margin-top: 5px">
+        <mat-form-field>
+            <input matInput [placeholder]="'Search' | translate">
+        </mat-form-field>
+    </form> -->
+    <!--  -->
+    <span class="nav-spacer"></span>
+
+    <div class="nav-brand mt-1">
+        Dashboard
+    </div>
+
+    <span class="nav-spacer"></span>
+
+    <button class="hidden-sm" mat-icon-button >
+        <mat-icon>account_circle</mat-icon>
+    </button>
+  
+    <button mat-icon-button (click)="onLoggedout()">
+        <mat-icon>exit_to_app</mat-icon>
+    </button>
+</mat-toolbar>

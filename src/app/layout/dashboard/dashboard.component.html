@@ -1,0 +1,56 @@
+<div class="lds-roller" *ngIf="isLoading === true">
+</div>
+
+
+<div class="row justify-content-center  mt-3 mb-4">
+  <h4>File List</h4>
+</div>
+<div class="row mb-2">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <div class="row">
+      <div class="col-md-0.5"></div>
+      <div class="col-md-1 mr-5">
+        <h6 style="font-size:18px;padding-left:30px;">Name</h6>
+      </div>
+      <div class="col-md-1 ml-5 mr-1"></div>
+      <div class="col-md-1 ml-5">
+        <h6 style="font-size: 18px;padding-left: 2.5px">Image</h6>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-1"></div>
+</div>
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let file of fileList;let i = index;">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <span class="mr-2">{{file.name}}</span>
+          </mat-panel-title>
+          <mat-panel-description>
+            <img src='{{file.url}}' class="img_thumb">
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <section class="detail-container">
+          <hr>
+          <div class="row">
+            <div class="col-12">
+              <button color="danger" class="btn btn-sm btn-outline-danger mr-2" (click)="deleteFile(file.name)">
+                Delete
+              </button>
+            </div>
+          </div>
+          <hr>
+        </section>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  <div class="col-md-1"></div>
+</div>
+<div class="row mt-3" style="height:3rem;">
+
+</div>

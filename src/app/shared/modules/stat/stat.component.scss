@@ -1,0 +1,59 @@
+@import '~@angular/material/theming';
+
+:host /deep/ .mat-card-header-text {
+    width: 100%;
+    text-align: right;
+}
+
+.icon-lg {
+    font-size: 40px;
+}
+
+.mat-card {
+    color: #fff;
+    .mat-card-header {
+        width: 100%;
+        
+    }
+    .mat-card-title {
+        font-size: 22px !important;
+        float:left;
+        text-align:center;
+      
+    }
+    .mat-card-subtitle {
+        color: #fff;
+        font-size: 20px !important;
+        
+    }
+    .subtitle{
+    color: #fff;
+    font-size: 20px !important;
+    font-family: "Open Sans";
+    
+}
+
+    .mat-card-actions {
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            color: #fff;
+        }
+    }
+}
+
+.mat-card.danger {
+    background: linear-gradient(60deg, #68c39f, #68c39f);
+}
+
+.mat-card.warn {
+    background: linear-gradient(60deg, #ffa726, #fb8c00);
+}
+
+.mat-card.success {
+    background: linear-gradient(60deg, #505458, #505458);
+}
+
+.mat-card.info {
+    background: linear-gradient(60deg, #26c6da, #00acc1);
+}
